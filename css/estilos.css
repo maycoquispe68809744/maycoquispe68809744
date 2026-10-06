@@ -209,48 +209,6 @@ footer a:hover {
 
   text-decoration: underline;
 }
-@media (max-width: 1280px) {
 
-  body {
-    grid-template-columns: 1fr;
-
-    grid-template-areas:
-      "header"
-      "nav"
-      "main"
-      "aside"
-      "footer";
-
-    font-size: 50px;
-
-    text-align: justify;
-  }
-
-  header {
-    align-items: center;
-
-    background-color: #80a8c8;
-  }
-
-  nav ul {
-    width: 70vw;
-
-    flex-direction: column;
-
-    align-items: center;
-
-    gap: 10px;
-  }
-
-  nav a {
-    width: 90%;
-  }
-
-  footer ul {
-    flex-direction: column;
-
-    gap: 10px;
-  }
-}
 
 

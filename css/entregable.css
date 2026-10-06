@@ -1,182 +1,173 @@
-*{
+/* Reset básico y variables de color */
+* {
     box-sizing: border-box;
-    color: #06457f;
-    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-body{
-    margin: 20px;
-    display: grid;
-    background-color: #06457f;
-    grid-template-columns: 3fr 1fr;
-    grid-template-rows: auto auto 1fr auto;
-    grid-template-areas: 
-    "header header"
-    "nav nav"
-    "main aside"
-    "footer footer";
+
+:root {
+    --primary-color: #0d47a1;
+    --secondary-color: #1976d2;
+    --accent-color: #ff9800;
+    --bg-light: #f4f6f9;
+    --card-bg: #ffffff;
+    --text-color: #333333;
+    --border-color: #e0e0e0;
+}
+
+body {
+    background-color: var(--bg-light);
+    color: var(--text-color);
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
     min-height: 100vh;
 }
-header{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    grid-area: header;
-    gap: 20px;
-    padding: 20px;
-    background-color: #a8c4ec;
 
+/* Header / Encabezado */
+header {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 1.5rem 2rem;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
-header h1{
-    margin: 0px;
-    font-size: 40px;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    border-bottom: solid 10px #06457f;
+
+header h1 {
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
-header img{
-    width: 200px;
-    height: auto;
-    transition: all 0.9s ease;
-}
-header img:hover{
-    transform: scale(1.1);
-}
-#presentacion{
-    font-size: 20px;
+
+/* Navegación */
+nav {
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 0.8rem 2rem;
+    text-align: center;
     font-weight: bold;
 }
-nav{
-    justify-content: center;
-    grid-area: nav;
-    padding: 5px;
-    display: flex;
-    background-color: #262b40;
+
+/* Contenedor Principal */
+main {
+    max-width: 1200px;
+    width: 90%;
+    margin: 2rem auto;
+    flex: 1; /* Hace que el footer baje al final */
 }
-nav ul{
+
+/* 1. Sección de Admisión (Banner de 2 columnas) */
+main > section:first-of-type {
     display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    background-color: var(--card-bg);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    align-items: center;
 }
-nav a{
-    width: 15vw;
-    margin: 8px;
-    padding: 8px;
-    list-style: none;
-    text-decoration: none;
-    background-color: #5379ae;
-    justify-content: center;
-    gap: 20px;
-    font-family: serif;
+
+main > section:first-of-type > div {
+    flex: 1;
+    min-width: 280px;
+}
+
+main > section:first-of-type h2 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+main > section:first-of-type button {
+    background-color: var(--accent-color);
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
     font-weight: bold;
     border-radius: 5px;
-    transition: all 0.9s ease;
+    cursor: pointer;
+    transition: background 0.3s ease;
 }
-nav ul a li{
+
+main > section:first-of-type button:hover {
+    background-color: #e68a00;
+}
+
+/* Estilo para simular contenedor de formulario */
+main > section:first-of-type > div:last-child {
+    background-color: var(--bg-light);
+    padding: 1.5rem;
+    border-radius: 6px;
+    border: 1px dashed var(--border-color);
     text-align: center;
-    color: #e6f0f7;
 }
-nav a:hover{
-    color: #82AFC8;
-    background-color: #3f5b83;
-    transform: scale(1.08);
+
+hr {
+    border: 0;
+    height: 1px;
+    background: var(--border-color);
+    margin: 2rem 0;
+}
+
+/* 2. Sección Principal (Layout Grid: Columna izquierda + Lateral derecha) */
+main > section:last-of-type {
+    display: grid;
+    grid-template-columns: 2fr 1fr; /* Columna principal más ancha que la lateral */
+    gap: 2rem;
+}
+
+/* Columna Principal (Article) */
+article {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+article > section {
+    background-color: var(--card-bg);
+    padding: 1.5rem;
     border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    border-left: 4px solid var(--secondary-color);
 }
-main{
-    grid-area: main;
-    background-color: #C8BCA0;
-}
-section{
-    padding: 20px;
-    height: 100%;
-    grid-area: section;
-    background-color: #2c444c;
-}
-article{
-    min-height: 150px;
-    padding: 20px;
-    margin-bottom: 20px;
-    background-color: #a8c4ec;
-}
-article img{
-    width: 100%;
-}
-article li{
-    font-size: 20px;
-}
-p{
-  font-size: 20px;
-}
-aside{
-    grid-area: aside;
-    padding: 20px;
-    color: #ffffff;
-    background-color: #0474c4;
-    min-height: 100%;
-}
-footer{
-  grid-area: footer;
-  padding: 20px;
-  background-color: #262b40;
-  justify-content: center;
-  align-items: center;
-}
-footer h3{
-  justify-content: center;
-  color: #ffffff;
-}
-footer ul{
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  list-style: none;
-}
-footer a{
-  text-decoration: none;
-  padding: 20px;
-  color: #e6f0f7;
-}
-footer a:hover {
-  color: #80a8c8;
-  text-decoration: underline;
-}
-@media (max-width: 1280px) {
 
-  body {
-    grid-template-columns: 1fr;
+article h2, article h3 {
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+    text-transform: capitalize;
+}
 
-    grid-template-areas:
-      "header"
-      "nav"
-      "main"
-      "aside"
-      "footer";
-
-    font-size: 50px;
-
-    text-align: justify;
-  }
-
-  header {
-    align-items: center;
-
-    background-color: #80a8c8;
-  }
-
-  nav ul {
-    width: 70vw;
-
+/* Barra Lateral (Aside) */
+aside {
+    display: flex;
     flex-direction: column;
-
-    align-items: center;
-
-    gap: 10px;
-  }
-
-  nav a {
-    width: 90%;
-  }
-
-  footer ul {
-    flex-direction: column;
-
-    gap: 10px;
-  }
+    gap: 1.5rem;
 }
+
+aside > section {
+    background-color: var(--card-bg);
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    border-top: 3px solid var(--accent-color);
+}
+
+aside h2 {
+    color: var(--primary-color);
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    text-transform: capitalize;
+}
+
+/* Pie de página */
+footer {
+    background-color: #222;
+    color: white;
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: auto;
+}
+
+/* Adaptación a Pantallas Pequeñas (Móviles
