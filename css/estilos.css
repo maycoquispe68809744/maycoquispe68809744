@@ -21,11 +21,6 @@ body {
   min-height: 100vh;
 }
 
-
-/* ================================
-   HEADER
-================================ */
-
 header {
   justify-content: center;
   align-items: center;
@@ -40,7 +35,7 @@ header {
 }
 
 header h1 {
-  margin: 0;
+  margin: 20px;
   font-size: 40px;
   color: #252525;
 }
@@ -56,13 +51,9 @@ header img:hover {
   transform: scale(1.1);
 }
 
-
-/* ================================
-   NAVEGACIÓN
-================================ */
-
 nav {
   justify-content: center;
+  align-items: center;
 
   grid-area: nav;
   padding: 5px;
@@ -74,6 +65,12 @@ nav {
 
 nav ul {
   display: flex;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+
+  list-style: none;
+  flex-wrap: wrap;
 }
 
 nav a {
@@ -82,12 +79,14 @@ nav a {
   margin: 8px;
   padding: 8px;
 
-  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
   text-decoration: none;
 
   background-color: #7d7d7d;
 
-  justify-content: center;
   gap: 20px;
 
   font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -101,6 +100,7 @@ nav a {
 nav ul a li {
   text-align: center;
   color: #ffffff;
+  list-style: none;
 }
 
 nav a:hover {
@@ -112,11 +112,6 @@ nav a:hover {
   border-radius: 8px;
 }
 
-
-/* ================================
-   CONTENIDO PRINCIPAL
-================================ */
-
 main {
   grid-area: main;
 
@@ -127,8 +122,6 @@ section {
   padding: 20px;
 
   height: 100%;
-
-  grid-area: section;
 
   background-color: #7d7d7d;
 }
@@ -144,12 +137,9 @@ article {
 
 article img {
   width: 70%;
+  max-width: 100%;
+  height: auto;
 }
-
-
-/* ================================
-   ASIDE
-================================ */
 
 aside {
   grid-area: aside;
@@ -163,21 +153,17 @@ aside {
   min-height: 100%;
 }
 
-
-
-/* ================================
-   FOOTER
-================================ */
-
 footer {
   grid-area: footer;
 
   padding: 20px;
 
-  background-color: #252525;
-
+  display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  background-color: #252525;
 }
 
 footer h3 {
@@ -194,6 +180,8 @@ footer ul {
   gap: 20px;
 
   list-style: none;
+
+  padding: 0;
 }
 
 footer a {
@@ -210,5 +198,78 @@ footer a:hover {
   text-decoration: underline;
 }
 
+@media (max-width: 768px) {
+  body {
+    grid-template-columns: 1fr;
 
+    grid-template-rows: auto auto auto auto auto;
 
+    grid-template-areas:
+      "header"
+      "nav"
+      "main"
+      "aside"
+      "footer";
+  }
+
+  header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  header h1 {
+    font-size: 32px;
+  }
+
+  header img {
+    width: 50%;
+  }
+
+  nav ul {
+    width: 100%;
+  }
+
+  nav a {
+    width: 40vw;
+  }
+
+  article img {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 26px;
+  }
+
+  header img {
+    width: 70%;
+  }
+
+  nav a {
+    width: 80vw;
+  }
+
+  section {
+    padding: 10px;
+  }
+
+  article {
+    padding: 15px;
+  }
+
+  aside {
+    padding: 15px;
+  }
+
+  footer ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+  }
+
+  footer a {
+    padding: 10px;
+  }
+}
