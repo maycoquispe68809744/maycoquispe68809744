@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instituto Tecnológico del Sur</title>
+    <link rel="icon" href="imagenes/ITS.png">
+    <!-- mis estilos y el bootstrap de siempre -->
+    <link rel="stylesheet" href="css/entregable.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+    <!-- encabezado principal con el logo -->
+    <header id="inicio">
+        <a href="index.html"><img src="imagenes/ITS.png" alt="Logo Instituto Tecnológico del Sur"></a>
+        <h1>INSTITUTO TECNOLÓGICO DEL SUR</h1>
+        <p id="presentacion">Bienvenidos al instituto tecnológico del sur, formando los profesionales del mañana con excelencia y valores</p>
+    </header>
+
+    <!-- barra de navegacion para moverse por la pagina -->
+    <nav>
+        <ul>
+            <li><a href="nosotros.html" target="_blank">Nosotros</a></li>
+            <li><a href="#carreras">Carreras</a></li>
+            <li><a href="#cya">Contáctos</a></li>
+            <li><a href="#cya">Admisión</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section>
+            <!-- la foto grande de la entrada -->
+            <article>
+                <img src="imagenes/fachada.jpeg" alt="Fachada del Instituto Tecnológico del Sur">
+            </article>
+
+            <!-- seccion de beneficios / por que elegir la compe -->
+            <article class="seccion-isur">
+                <header class="titulo-seccion">
+                    <h2>POR QUÉ ELEGIR <span>ITSUR</span></h2>
+                    <div class="linea-decorativa"></div>
+                </header>
+            
+                <div class="tarjetas-grid">
+                    <div class="tarjeta-carrera">
+                        <img src="imagenes/a.jpg" alt="Prestigio">
+                        <div class="tarjeta-contenido">
+                            <span class="barra-color barra-amarilla"></span>
+                            <div class="texto-contenido">
+                                <h3>Prestigio Institucional</h3>
+                                <p>38 años formando profesionales especializados</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tarjeta-carrera">
+                        <img src="imagenes/b.jpg" alt="Programas">
+                        <div class="tarjeta-contenido">
+                            <span class="barra-color barra-roja"></span>
+                            <div class="texto-contenido">
+                                <h3>Programas de Estudios</h3>
+                                <p>Termina tu carrera en 3 años obteniendo el título de Bachiller Técnico.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tarjeta-carrera">
+                        <img src="imagenes/c.jpg" alt="Turnos">
+                        <div class="tarjeta-contenido">
+                            <span class="barra-color barra-roja"></span>
+                            <div class="texto-contenido">
+                                <h3>Turnos Académicos</h3>
+                                <p>Organízate y realiza tus diferentes actividades sin dejar de estudiar.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tarjeta-carrera">
+                        <img src="imagenes/d.jpg" alt="Empleabilidad">
+                        <div class="tarjeta-contenido">
+                            <span class="barra-color barra-amarilla"></span>
+                            <div class="texto-contenido">
+                                <h3>Empleabilidad</h3>
+                                <p>7 de cada 10 empresas buscan talento formado en ITSUR.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- el carrusel con las 7 carreras -->
+            <article id="carreras">
+                <h2>Nuestras Carreras</h2>
+                <div class="carousel-container">
+                    <button class="carousel-btn prev" onclick="moveSlide(-1)" aria-label="Anterior">&#10094;</button>
+                    <div class="carousel-track">
+                        <div class="carousel-card"><img src="imagenes/ciberseguridad.jpg" alt="Ciberseguridad"><h3>1. Ciberseguridad</h3><p>Protege los sistemas, redes y datos de las empresas contra ataques informáticos.</p></div>
+                        <div class="carousel-card"><img src="imagenes/cienciadedatos.avif" alt="Ciencia de Datos"><h3>2. Ciencia de Datos e IA</h3><p>Analiza grandes cantidades de datos y crea modelos inteligentes para tomar decisiones.</p></div>
+                        <div class="carousel-card"><img src="imagenes/desarrollodesoftware.webp" alt="Desarrollo de Software"><h3>3. Desarrollo de Software</h3><p>Diseña, crea y mantiene programas, aplicaciones móviles y sistemas.</p></div>
+                        <div class="carousel-card"><img src="imagenes/diseñouxui.webp" alt="Diseño UX/UI"><h3>4. Diseño UX/UI</h3><p>Mejora la experiencia del usuario y diseña la interfaz visual de páginas web y apps.</p></div>
+                        <div class="carousel-card"><img src="imagenes/ingenieriarobotica.png" alt="Ingeniería Robótica"><h3>5. Ingeniería Robótica</h3><p>Mezcla mecánica, electrónica y programación para construir robots.</p></div>
+                        <div class="carousel-card"><img src="imagenes/cloudcomputing.jpg" alt="Cloud Computing"><h3>6. Cloud Computing</h3><p>Administra y organiza los servicios y datos en la nube virtual.</p></div>
+                        <div class="carousel-card"><img src="imagenes/desarrolloweb.jpg" alt="Desarrollo Web"><h3>7. Desarrollo Web</h3><p>Crea y programa sitios de internet funcionales y atractivos.</p></div>
+                    </div>
+                    <button class="carousel-btn next" onclick="moveSlide(1)" aria-label="Siguiente">&#10095;</button>
+                </div>
+            </article>
+
+            <!-- aqui arme los 2 formularios usando el grid de bootstrap para que queden lado a lado -->
+            <article class="py-5" id="cya">
+                <div class="container">
+                    <div class="text-center mb-5">
+                        <h2 class="fw-bold">CONTÁCTOS E INSCRIPCIONES</h2>
+                        <p class="text-muted">Estamos listos para ayudarte a formar parte del Instituto Tecnológico del Sur.</p>
+                    </div>
+
+                    <div class="row g-4">
+                        <!-- form 1: dudas generales -->
+                        <div class="col-lg-6">
+                            <div class="card shadow border-0 h-100">
+                                <div class="card-header bg-warning text-dark text-center py-3"><h3 class="mb-0">Contáctanos</h3></div>
+                                <div class="card-body p-4">
+                                    <p class="text-muted">Completa el formulario y resolveremos tus dudas.</p>
+                                    <form action="#" method="post">
+                                        <div class="mb-3"><label for="nombre-contacto" class="form-label">Nombre completo</label><input type="text" class="form-control" id="nombre-contacto" name="nombre-contacto" placeholder="Ingresa tu nombre completo" required></div>
+                                        <div class="mb-3"><label for="correo-contacto" class="form-label">Correo electrónico</label><input type="email" class="form-control" id="correo-contacto" name="correo-contacto" placeholder="ejemplo@gmail.com" required></div>
+                                        <div class="mb-3"><label for="telefono-contacto" class="form-label">Teléfono</label><input type="tel" class="form-control" id="telefono-contacto" name="telefono-contacto" placeholder="999 999 999" required></div>
+                                        <div class="mb-3"><label for="mensaje" class="form-label">Mensaje</label><textarea class="form-control" id="mensaje" name="mensaje" rows="5" placeholder="Escribe tu consulta..." required></textarea></div>
+                                        <div class="d-grid"><button type="submit" class="btn btn-warning btn-lg">Enviar consulta</button></div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- form 2: registro directo -->
+                        <div class="col-lg-6">
+                            <div class="card shadow border-0 h-100">
+                                <div class="card-header bg-danger text-white text-center py-3"><h3 class="mb-0">Inscríbete ahora</h3></div>
+                                <div class="card-body p-4">
+                                    <p class="text-muted">Completa tus datos para iniciar tu proceso de inscripción.</p>
+                                    <form action="#" method="post">
+                                        <div class="mb-3"><label for="nombre-inscripcion" class="form-label">Nombre completo</label><input type="text" class="form-control" id="nombre-inscripcion" name="nombre-inscripcion" placeholder="Ingresa tu nombre completo" required></div>
+                                        <div class="mb-3"><label for="dni" class="form-label">DNI</label><input type="text" class="form-control" id="dni" name="dni" placeholder="Ingresa tu DNI" maxlength="8" required></div>
+                                        <div class="mb-3"><label for="correo-inscripcion" class="form-label">Correo electrónico</label><input type="email" class="form-control" id="correo-inscripcion" name="correo-inscripcion" placeholder="ejemplo@gmail.com" required></div>
+                                        <div class="mb-3"><label for="telefono-inscripcion" class="form-label">Teléfono</label><input type="tel" class="form-control" id="telefono-inscripcion" name="telefono-inscripcion" placeholder="999 999 999" required></div>
+                                        <div class="mb-3">
+                                            <label for="carrera" class="form-label">Carrera de interés</label>
+                                            <select class="form-select" id="carrera" name="carrera" required>
+                                                <option value="" selected disabled>Selecciona una carrera</option>
+                                                <option value="ciberseguridad">Ciberseguridad</option>
+                                                <option value="ciencia-datos">Ciencia de Datos e Inteligencia Artificial</option>
+                                                <option value="desarrollo-software">Desarrollo de Software</option>
+                                                <option value="diseno-ux-ui">Diseño UX/UI</option>
+                                                <option value="robotica">Ingeniería Robótica</option>
+                                                <option value="cloud">Cloud Computing</option>
+                                                <option value="desarrollo-web">Desarrollo Web</option>
+                                            </select>
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="turno" class="form-label">Turno</label>
+                                            <select class="form-select" id="turno" name="turno" required>
+                                                <option value="" selected disabled>Selecciona un turno</option>
+                                                <option value="manana">Mañana</option>
+                                                <option value="tarde">Tarde</option>
+                                                <option value="noche">Noche</option>
+                                            </select>
+                                        </div>
+                                        <div class="d-grid"><button type="submit" class="btn btn-danger btn-lg">Enviar inscripción</button></div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </section>
+    </main>
+
+    <!-- footer con los datos del profe y el repo -->
+    <footer>
+        <div>
+            <section>
+                <img src="imagenes/ITS.png" alt="Logo ITS" width="100">
+                <h2>INSTITUTO TECNOLÓGICO DEL SUR</h2>
+                <p>Formando profesionales del mañana con excelencia, tecnología y valores.</p>
+            </section>
+            <section>
+                <h3>Enlaces rápidos</h3>
+                <ul>
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#carreras">Carreras</a></li>
+                    <li><a href="#cya">Contáctanos</a></li>
+                    <li><a href="#cya">Admisión</a></li>
+                </ul>
+            </section>
+            <section>
+                <h3>Nuestras Carreras</h3>
+                <ul>
+                    <li>Ciberseguridad</li>
+                    <li>Ciencia de Datos e Inteligencia Artificial</li>
+                    <li>Desarrollo de Software</li>
+                    <li>Diseño UX/UI</li>
+                    <li>Ingeniería Robótica</li>
+                    <li>Cloud Computing</li>
+                    <li>Desarrollo Web</li>
+                </ul>
+            </section>
+            <section>
+                <h3>Proyecto Tarea 4</h3>
+                <p>Página web desarrollada como parte del curso de Frontend.</p>
+                <h3>GitHub</h3>
+                <ul>
+                    <li><a href="https://github.com/maycoquispe68809744/maycoquispe68809744" target="_blank" rel="noopener noreferrer">Mi Repositorio</a></li>
+                    <li><a href="https://github.com/arnoldbgq/cursofrontend/tree/main" target="_blank" rel="noopener noreferrer">Repositorio del Instructor</a></li>
+                    <li><a href="https://arnoldbgq.github.io/cursofrontend/" target="_blank" rel="noopener noreferrer">Página del Instructor</a></li>
+                </ul>
+            </section>
+        </div>
+        <hr>
+        <div class="text-center">
+            <p>© 2026 Instituto Tecnológico del Sur. Todos los derechos reservados.</p>
+            <p>Desarrollado para la Tarea 4 de Frontend.</p>
+        </div>
+    </footer>
+
+    <!-- script al final para que cargue rapido -->
+    <script src="js/entregable.js"></script>
+</body>
+</html>
