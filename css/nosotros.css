@@ -1,0 +1,451 @@
+/* =========================
+   ESTILOS GENERALES
+========================= */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #172b4d;
+    background-color: #f4f8fc;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+body > header {
+    background: linear-gradient(135deg, #063970, #0d6efd);
+    color: white;
+    text-align: center;
+    padding: 25px 20px;
+}
+
+body > header img {
+    width: 110px;
+    margin-bottom: 10px;
+}
+
+body > header h1 {
+    margin: 5px 0;
+    font-size: 30px;
+}
+
+#presentacion {
+    margin: 10px auto 0;
+    max-width: 800px;
+}
+
+
+/* =========================
+   NAVEGACIÓN
+========================= */
+
+nav {
+    background-color: #052c65;
+    padding: 12px;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #5eb5ff;
+}
+
+
+/* =========================
+   CONTENIDO PRINCIPAL
+========================= */
+
+main {
+    max-width: 1200px;
+    margin: auto;
+}
+
+
+/* =========================
+   TÍTULOS DE SECCIÓN
+========================= */
+
+.titulo-seccion {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.titulo-seccion h2 {
+    color: #063970;
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.titulo-seccion h2 span {
+    color: #0d6efd;
+}
+
+.linea-decorativa {
+    width: 70px;
+    height: 4px;
+    background-color: #0d6efd;
+    margin: 10px auto;
+}
+
+
+/* =========================
+   HISTORIA DEL INSTITUTO
+========================= */
+
+.historia-instituto {
+    background-color: white;
+    padding: 60px 30px;
+}
+
+.historia-contenido {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+    max-width: 1100px;
+    margin: auto;
+}
+
+
+/* IMAGEN DE LA HISTORIA */
+
+.historia-imagen img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 50, 100, 0.20);
+}
+
+
+/* TEXTO DE LA HISTORIA */
+
+.historia-texto {
+    padding: 10px;
+}
+
+.historia-texto h3 {
+    color: #063970;
+    font-size: 27px;
+    margin-bottom: 20px;
+}
+
+.historia-texto p {
+    color: #555;
+    line-height: 1.8;
+    text-align: justify;
+    margin-bottom: 15px;
+}
+
+
+/* =========================
+   MISIÓN Y VISIÓN
+========================= */
+
+.mision-vision {
+    background-color: #f4f8fc;
+    padding: 60px 30px;
+}
+
+.identidad-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+
+/* TARJETAS MISIÓN Y VISIÓN */
+
+.identidad-card {
+    background-color: white;
+    padding: 40px 30px;
+    text-align: center;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 50, 100, 0.15);
+    transition: transform 0.3s ease;
+}
+
+.identidad-card:hover {
+    transform: translateY(-7px);
+}
+
+
+/* MISIÓN */
+
+.identidad-card.mision {
+    border-top: 6px solid #ffc107;
+}
+
+
+/* VISIÓN */
+
+.identidad-card.vision {
+    border-top: 6px solid #0d6efd;
+}
+
+
+/* ICONOS */
+
+.icono-identidad {
+    font-size: 45px;
+    margin-bottom: 15px;
+}
+
+
+/* TÍTULOS */
+
+.identidad-card h3 {
+    color: #063970;
+    font-size: 27px;
+    margin-bottom: 15px;
+}
+
+
+/* TEXTO */
+
+.identidad-card p {
+    color: #555;
+    line-height: 1.8;
+}
+
+
+/* =========================
+   VALORES INSTITUCIONALES
+========================= */
+
+.valores-institucionales {
+    background-color: white;
+    padding: 60px 30px;
+}
+
+.valores-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+
+/* TARJETA DE VALOR */
+
+.valor-card {
+    background-color: #f4f8fc;
+    padding: 30px 20px;
+    text-align: center;
+    border-radius: 12px;
+    border-bottom: 5px solid #0d6efd;
+    box-shadow: 0 4px 12px rgba(0, 50, 100, 0.12);
+    transition: transform 0.3s ease;
+}
+
+.valor-card:hover {
+    transform: translateY(-7px);
+}
+
+
+/* ICONO DEL VALOR */
+
+.valor-icono {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+
+/* TÍTULO DEL VALOR */
+
+.valor-card h3 {
+    color: #063970;
+    font-size: 21px;
+    margin: 10px 0;
+}
+
+
+/* TEXTO DEL VALOR */
+
+.valor-card p {
+    color: #555;
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    background-color: #052c65;
+    color: white;
+    margin-top: 40px;
+    padding: 40px 30px 15px;
+}
+
+footer > div:first-child {
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+
+footer section h2,
+footer section h3 {
+    color: #5eb5ff;
+}
+
+footer ul {
+    padding: 0;
+    list-style: none;
+}
+
+footer li {
+    margin-bottom: 8px;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #5eb5ff;
+}
+
+footer hr {
+    border-color: #5eb5ff;
+    max-width: 1200px;
+}
+
+footer > div:last-child {
+    text-align: center;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 900px) {
+
+    /* Historia */
+
+    .historia-contenido {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* Misión y visión */
+
+    .identidad-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* Valores */
+
+    .valores-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+
+    /* Footer */
+
+    footer > div:first-child {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+/* =========================
+   CELULARES
+========================= */
+
+@media (max-width: 600px) {
+
+    /* Navegación */
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+    }
+
+
+    /* Header */
+
+    body > header h1 {
+        font-size: 22px;
+    }
+
+
+    /* Historia */
+
+    .historia-instituto {
+        padding: 45px 20px;
+    }
+
+    .historia-imagen img {
+        height: 280px;
+    }
+
+    .historia-texto h3 {
+        font-size: 23px;
+    }
+
+
+    /* Misión y visión */
+
+    .mision-vision {
+        padding: 45px 20px;
+    }
+
+
+    /* Valores */
+
+    .valores-institucionales {
+        padding: 45px 20px;
+    }
+
+    .valores-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* Títulos */
+
+    .titulo-seccion h2 {
+        font-size: 25px;
+    }
+
+
+    /* Footer */
+
+    footer > div:first-child {
+        grid-template-columns: 1fr;
+    }
+
+}
